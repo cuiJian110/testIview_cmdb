@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // const str = "{'statue': 0, 'msg': '过期啦'}";
+    // console.log(JSON.parse(str))
+    // const obj = {statue: 0, msg: "过期啦"}
+    // console.log(JSON.stringify(obj))
+    const list = [
+        { "available": "isAvailable132", "status": "ok", "ip": "192.168.224.132" },
+        { "available": "isAvailable131", "status": "ok", "ip": "192.168.224.131" },
+        { "available": "isAvailable138", "status": "ok", "ip": "192.168.177.138" },
+        { "available": "isAvailable123", "status": "ok", "ip": "192.168.23.123" },
+        { "available": "isAvailable9", "status": "ok", "ip": "192.168.23.9" },
+        { "available": "isAvailable143", "status": "ok", "ip": "192.168.177.143" },
+        { "available": "isAvailable1", "status": "ok", "ip": "127.0.0.1" }
+    ]
+    const arr = [
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.224.132",
+            rsyslog: ["2", "N/A"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: ""
+        },
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.177.138",
+            rsyslog: ["2", "N/A"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: ""
+        },
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.177.143",
+            rsyslog: ["2", "N/A"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: ""
+        },
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.224.131",
+            rsyslog: ["2", "N/A"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: "xx的主机"
+        },
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.23.123",
+            rsyslog: ["2", "N/A"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: ""
+        },
+        {
+            S6000: ["2", "N/A"],
+            ip: "192.168.23.9",
+            rsyslog: ["1", "up"],
+            salt: ["1", "up"],
+            zabbix: ["2", "N/A"],
+            别名: ""
+        },
+        {
+            ip: "8.8.8.8",
+            salt: ["0", "down"],
+            别名: null
+        },
+        {
+            ip: "9.9.9.9",
+            salt: ["0", "down"],
+            别名: null
+        }
+    ]
+    arr.forEach(item => {
+        if(list.findIndex(i => item.ip === i.ip) !== -1) {
+            item.zabbix.push(list[list.findIndex(i => item.ip === i.ip)]);
+        }
+    })
+    console.log(arr);
+
+</script>
