@@ -25,6 +25,7 @@
                         <MenuItem name="candan1_1">菜单1_1</MenuItem>
                         <MenuItem name="candan1_2">菜单1_2</MenuItem>
                         <MenuItem name="candan1_3">菜单1_3</MenuItem>
+                        <MenuItem name="candan1_4">菜单1_4</MenuItem>
                     </Submenu>
             </Menu>
             </Sider>
